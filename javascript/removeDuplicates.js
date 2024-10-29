@@ -27,14 +27,6 @@ Output: 5, nums = [0,1,2,3,4]
 */
 
 var removeDuplicates = function(nums) {
-    //I: an array of numbers
-    //O: the total sum of unique numbers in the array
-
-    //i want to define a variable to store the unique element count
-    //i want to iterate through the array compare the curent index 
-    //to the previous, if there is not a match then increase the count k
-    //otherwise continue and return k at the end
-
     let k = 1;
     for (let i = 1; i < nums.length; i++) {
         if (nums[i] !== nums[i-1]) {

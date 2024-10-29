@@ -30,16 +30,6 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 ------------------------------------------------------------------------------------*/
 
 var removeElement = function(nums, val) {
-    //I: a list of nums, and the value to remove from that list
-    //O: a number, the length of nums with val removed
-    
-    //i want to iterate through nums
-    //then check if each item in the list is === val
-    //if the item is === val then remove from the list and reset the index
-    //else continue to the next item and check again
-    //assign the length of the modified nums list to a variable
-    //return that variable
-
     for (let i = 0; i < nums.length; i++) {
         if (nums[i] === val) {
             nums.splice(i, 1);
