@@ -17,18 +17,6 @@ Do not allocate extra space for another array. You must do this by modifying the
 */
 
 var removeDuplicates = function(nums) {
-    /*
-    I: an array of numbers
-    O: a number representing the length of nums after removing
-    each occurrence of element that appears more than two times
-    C: the array must maintain the same order
-
-    Approach:
-    I will create a pointer then iterate through nums and check
-    If the pointer is < 2 or not equal to the element at i - 2
-    If it passes the condition I will set nums at that index = num
-    Then return the count of i 
-    */
     let i = 0;
     for (let num of nums) {
         if (i < 2 || num !== nums[i - 2]) {

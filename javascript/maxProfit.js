@@ -31,19 +31,6 @@ Explanation: There is no way to make a positive profit, so we never buy the stoc
 */
 
 var maxProfit = function(prices) {
-    /*
-    I: a prices array representing the price of a stock on that day 
-    O: the amount of profit made on these trades
-
-    Approach:
-    Initialize a variable maxProfit to 0, which will store the total profit.
-    Loop through the prices array from the first to the last day.
-    For each day, if the price of the stock increases on the next day, add the difference to maxProfit.
-    By the end of the loop, maxProfit will contain the maximum profit you can achieve.  
-
-    This solution will need to be O(n) because each item in the price will need to be checked
-    to determine the max potential profit.
-    */
     let maxProfit = 0;
     for (let i = 0; i < prices.length; i++) {
         let currentPrice = prices[i];
