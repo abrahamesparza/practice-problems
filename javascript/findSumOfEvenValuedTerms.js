@@ -19,13 +19,13 @@ const findSumOfEvenValuedTerms = () => {
 
 /* TEST */
 function testFindSumOfEvenValuedTerms() {
-const result = findSumOfEvenValuedTerms();
-if (result === 4613732) {
-    return 'findSumOfEvenValuedTerms test passes.';
-}
-else {
-    return 'findSumOfEvenValuedTerms test failed.';
-}
+  const result = findSumOfEvenValuedTerms();
+  if (result === 4613732) {
+      return 'findSumOfEvenValuedTerms test passes.';
+  }
+  else {
+      return 'findSumOfEvenValuedTerms test failed.';
+  }
 };
 
 console.log(testFindSumOfEvenValuedTerms());
