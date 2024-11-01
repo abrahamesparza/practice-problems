@@ -31,7 +31,7 @@ const parse = (arrayData) => {
       personMap.set(person, new Map());
       for (let i = 1; i < elements.length; i+=2) {
         let collections = personMap.get(person);
-        collections.set(elements[i+1], parseInt(elements[i], 10));
+        collections.set(elements[i+1], Number(elements[i]));
       }
     }
   
