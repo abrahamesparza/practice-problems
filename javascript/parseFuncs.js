@@ -19,7 +19,7 @@ P2
 the common collections function should find common collections in the data and names arguments that are passed in
 and return those common similaries otherwise return an empty object
 example:
--> P2(input, [tom, jean]) -> 1 cat, 1 house
+-> P2(input, [tom, jean]) -> 1 dog, 1 house
 */
 
 const parse = (arrayData) => {
