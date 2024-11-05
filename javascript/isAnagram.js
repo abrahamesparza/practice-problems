@@ -18,12 +18,12 @@ Output: false
 var isAnagram = function(s, t) {
     if (s.length !== t.length) return false;
     
-    // iterative solution
+    // iterative solution O(n log n)
     // let sortedS = s.split('').sort().join('');
     // let sortedT = t.split('').sort().join('');
     // return true ? sortedS === sortedT : false;
   
-    // map solution
+    // map solution O(n)
     let sMap = new Map();
   
     for (let char of s) {
