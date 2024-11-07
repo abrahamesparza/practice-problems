@@ -34,18 +34,15 @@ C: if length of array is 1 return the number in the array
 /*------------*/
 
 var majorityElement = function (nums) {
-    let n = nums.length;
-    if (n === 1) return nums[0];
+    let numsLength = nums.length;
+    if (numsLength === 1) return nums[0];
 
     let numsMap = new Map();
     for (let num of nums) {
-      if (!numsMap.has(num)) {
-        numsMap.set(num, 0)
-      }
-      numsMap.set(num, (numsMap.get(num)) + 1)
+      numsMap.set(num, (numsMap.get(num) || 0) + 1)
     }
     
-    let threshold = n / 2;
+    let threshold = numsLength / 2;
     for (let [key, value] of numsMap.entries()) {
       if (value < threshold) {
         continue;
