@@ -12,27 +12,28 @@ Input: nums = [-1,-100,3,99], k = 2
 Output: [3,99,-1,-100]
 */
 
-//Solution 1:
 var rotate = function(nums, k) {
-    if (k % 2 !== 0) {
-        k = k + 1;
-        let rotated = nums.slice(0, k)
-        nums = nums.slice(k);
-        for (let num of rotated) {
-        nums.push(num);
-        }
-        return nums;
-    }
-    else {
-        let rotated = nums.slice(0, k)
-        nums = nums.slice(k);
-        for (let num of rotated) {
-            nums.push(num);
-        }
-        return nums;
+    k = k % nums.length;
+
+    //reverse the entrie array
+    reverseOrder(nums, 0, nums.length - 1);
+    //reverse the first half of the array
+    reverseOrder(nums, 0, k - 1);
+    //reverse the last half of the array
+    reverseOrder(nums, k, nums.length - 1);
+
+    return nums;
+};
+    
+var reverseOrder = (arr, start, end) => {
+    while (start < end) {
+        let temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
     }
 };
+
 // console.log(rotate([1, 2, 3, 4, 5, 6, 7], 3)) // [5 ,6, 7, 1, 2, 3, 4]
 // console.log(rotate([-1,-100,3,99], 2)) // [3, 99, -1, -100]
-
-//Solution 2:
