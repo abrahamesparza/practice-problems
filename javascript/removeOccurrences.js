@@ -29,13 +29,7 @@ Now str has no occurrences of "abc".
 
 const removeOccurrences = (str, subStr) => {
     while (str.includes(subStr)) {
-      let indexFound = str.indexOf(subStr)
-      let lastIndex = indexFound + subStr.length;
-      console.log(`Original str: ${str}`)
-      console.log(`Removing subStr: ${subStr} found between indexes ${indexFound} and ${lastIndex}`);
       str = str.replace(subStr, '');
-      console.log(`Updated str: ${str}`)
-      console.log('----')
     }
     return str;
 }
